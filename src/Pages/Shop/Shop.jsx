@@ -1,20 +1,20 @@
 import React from "react";
-import "./Shop.css";
-import { DummyData } from "../../DummyData";
-import { Product } from "./Product";
-function Shop() {
+import { PRODUCTS } from "../../products";
+import { Product } from "./product";
+import "./shop.css";
+
+export const Shop = () => {
   return (
-    <div className="Shop">
+    <div className="shop">
       <div className="shopTitle">
-        <h1>Shop App</h1>
+        <h1>PedroTech Shop</h1>
       </div>
+
       <div className="products">
-        {DummyData.map((product) => (
+        {PRODUCTS.map((product) => (
           <Product data={product} />
         ))}
       </div>
     </div>
   );
-}
-
-export default Shop;
+};
